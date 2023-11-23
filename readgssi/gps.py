@@ -175,7 +175,7 @@ def readdzg(fi, frmt, header, verbose=False):
                         if rowrmc == 0:
                             init_time = timestamp
                         prevtrace = trace
-                        array = array.append({'datetimeutc':timestamp.strftime('%Y-%m-%d %H:%M:%S.%f %z'),
+                        array = array.concat({'datetimeutc':timestamp.strftime('%Y-%m-%d %H:%M:%S.%f %z'),
                                               'trace':trace, 'longitude':x1, 'latitude':y1, 'altitude':z1,
                                               'velocity':u, 'sec_elapsed':elapsed, 'meters':m}, ignore_index=True)
                         rowrmc += 1
